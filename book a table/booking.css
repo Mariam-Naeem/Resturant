@@ -1,0 +1,339 @@
+
+*{
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    background-color:rgb(198, 180, 180);
+}
+header{
+border-radius: 4px;
+position: sticky;
+top: 0;
+z-index: 2000;
+font-size: 19px;
+     background: linear-gradient(to right, #B7B597, #59585c);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+header h3,.logo{
+    color: #fff;
+    width: 70px;
+    margin-left: 40px;
+    border-radius: 50%;
+}
+header ul {
+     padding: 30px; 
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+}
+header ul li a{
+        margin: 5px;
+    padding: 8px;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+font-weight: bold;
+}
+header ul li a:hover{
+    background-color:  #FFF078;
+    border-radius: 40%;
+    color: #fff;
+}
+.active{
+color: #FFF078;
+}
+
+.all{
+    margin-top: 30px;
+    display: flex;
+    flex-wrap:wrap;
+    flex-direction: row;
+    height: fit-content;
+    justify-content:space-around;
+    gap: 10px;
+margin-bottom: 10px;
+/* background-color:rgb(198, 180, 180); */
+}
+.button{
+    background-color: #FFF078;
+    border: 0px ;
+    border-radius: 5px;
+    height:30px;
+}
+.video{
+
+    margin-bottom: -4px ;
+}
+.part2{
+    width: 550px;
+background-color: #333;
+}
+.part2 p{
+    text-align: center;
+    color: #FFF078;
+    font-weight: bold;
+    font-size: 24px;
+}
+form {
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+flex: 1;
+justify-content: center;
+}
+form div{
+    display: flex;
+    flex-direction: column;
+flex-wrap: wrap;
+
+}
+form input, form textarea,form select{
+    /* margin: 4px; */
+    width: 95%;
+        margin: 10px auto;
+    padding:20px ;
+}
+
+@media screen and (min-width:300px) and (max-width: 768px) {
+    .all {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .video, .part2 {
+        width: 80%;
+        max-width: 80%;
+    }
+    .video video {
+        width: 100%;
+        height: auto;
+    }
+    .part2 p {
+        font-size: 20px;
+    }
+    .invalid {
+    border: 2px solid red;
+}
+    form {
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+    }
+    form div {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    form input, form select, form textarea {
+        width: 90%;
+        margin: 10px 0;
+    }
+    .button {
+        width: 80%;
+        padding: 15px;
+    }
+}
+
+@media (min-width: 768px) and (max-width:900px) {
+    .all {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .video, .part2 {
+        width: 80%;
+        max-width: 80%;
+    }
+    .video video {
+        width: 100%;
+        height: auto;
+    }
+    .part2 p {
+        font-size: 20px;
+    }
+    form {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    form div {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    form input, form select, form textarea {
+        width: 90%;
+        margin: 10px 0;
+    }
+    .button {
+        width: 100%;
+        padding: 15px;
+    }
+}
+
+
+
+
+
+
+footer{
+        
+    background-color: #333;
+    color:#fff;
+    padding :20px auto;
+    text-align: center; 
+}
+.footer-container{
+    /* margin: 20px; */
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: space-around;
+    height: 300px;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.footer-section{
+    margin: 20px;
+    padding: 20px;
+}
+.footer-section h3,.footer-section p{
+margin-top: 10px;
+padding: 5px;
+}
+.footer-section a{
+    color: #fff078;
+    text-decoration: none;
+}
+.footer-section a img{
+    width: 40px;
+}
+.footer-section h3{
+    color:#FFF078;
+}
+.links{
+        display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    flex-direction: column;
+}
+@media screen and (max-width:570px) {
+    
+    header{
+        text-align: center;
+        border-radius: 4px;
+        position: sticky;
+        top: 0;
+        z-index: 2000;
+        font-size: 19px;
+        background: linear-gradient(to right, #B7B597, #59585c);
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+}
+header h3,.logo{
+    
+        color: #fff;
+        max-width: 70px;
+        border-radius: 50%;
+        margin-right: 100px;
+}
+
+header ul {
+            margin: 0px;
+        padding: 5px;
+        display: flex;
+        flex-direction: row;
+        
+        flex-wrap: wrap;
+    }
+    header ul li{
+        padding:8px;
+    }
+header ul li a{
+        margin: 5px;
+    
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+font-weight: bold;
+}
+
+.footer-container{
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    align-items: center;
+
+}
+.footer-section{
+    margin: 7px;
+    padding: 5px;
+}
+}
+@media screen and (min-width:570px) and  (max-width:618px) {
+
+    header{
+border-radius: 4px;
+        position: sticky;
+        top: 0;
+        z-index: 2000;
+        font-size: 19px;
+        background: linear-gradient(to right, #B7B597, #59585c);
+        background-size: cover;
+        display: flex;
+flex-wrap: wrap;
+        flex-direction: column;
+        align-content: space-between
+}
+
+header ul {
+            margin: 0px;
+        padding: 5px;
+        display: flex;
+        flex-direction: row;
+        
+        flex-wrap: wrap;
+    }
+header ul li a{
+        margin: 5px;
+    
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+font-weight: bold;
+}
+
+
+}
+@media screen and (min-width:618px) and (max-width:730px) {
+    header{
+            display: flex;
+
+    align-items: center;
+    flex-wrap: wrap;
+    }
+    header ul {
+    
+    list-style: none;
+    display: flex;
+    
+    align-items: center; 
+}
+header ul li a{
+        margin: 5px;
+
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+font-weight: bold;
+}
+}

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Order</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+                .dynamic-content {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px 0;
+            position: relative;
+        }
+        .counter-display {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .increment-button, .decrement-button, .clear-button, .clear-all-button {
+            margin-right: 5px;
+        }
+        .clear-all-button {
+            margin-top: 10px;
+        }
+        .no-items-message {
+            font-weight: bold;
+            color: #f00;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div>
+        <img src="../image/logo-removebg-preview.png" class="logo" alt="Logo">
+        <h3>RESTAURANT</h3>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="../main/Home.html" >Home</a></li>
+            <li><a href="../menu/menu.html">Menu</a></li>
+            <li><a href="#" class="active">Order</a></li>
+            <li><a href="../about/about.html">about</a></li>
+            <li><a href="../branches/branches.html">branches</a></li>
+            <li><a href='../book a table/booking.html' id='bookTable'>book a table</a></li>
+        </ul>
+    </nav>
+</header>
+
+<br><br>
+<div id="container">
+    <div id="destination">
+    </div>
+</div>
+
+<div id="btnnext" style="display: none;">
+    <input type="button" name="next" value="Next" class="next" onclick="window.open('payment.html', '_bank');">
+</div>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p>123 Foodie Street, cairo City</p>
+            <p>Phone: 01207961718</p>
+            <p>Email: Mariam@gmail.com</p>
+        </div>
+        <div class="footer-section">
+            <h3>Operating Hours</h3>
+            <p>Monday - Friday: 8 AM - 10 PM</p>
+            <p>Saturday - Sunday: 9 AM - 11 PM</p>
+        </div>
+        <div class="footer-section ">
+            <h3>Follow Us</h3>
+            <div class="links">
+                <a href="#">Facebook
+                    <img src="../image/download1-removebg-preview.png">
+                </a>
+
+                <a href="#">Instagram
+                    <img src="../image/download__1_-removebg-preview.png">
+                </a>
+
+                <a href="#">Twitter
+                    <img src="../image/Twitter_for_Educators_-_A_Document-removebg-preview.png">
+                </a>
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    window.onload = function() {
+        let destination = document.getElementById("destination");
+        let nextButton = document.getElementById("btnnext");
+
+        function loadItems() {
+            destination.innerHTML = '';
+            let hasItems = false; 
+
+            let noItemsMessage = document.querySelector('.no-items-message');
+            if (noItemsMessage) {
+                noItemsMessage.remove();
+            }
+
+            for (let i = 1; i <= 12; i++) {
+                let content = localStorage.getItem("copiedContent" + i);
+                let count = localStorage.getItem("itemCount" + i) || 1;
+                
+                if (content) {
+                    hasItems = true;
+                    
+                    let container = document.createElement("div");
+                    container.className = 'dynamic-content';
+
+                    container.innerHTML = content;
+// ====================================================================================================================
+                    let counterDisplay = document.createElement("span");
+                    counterDisplay.className = 'counter-display';
+                    counterDisplay.textContent = "Count: " + count;
+                    container.appendChild(counterDisplay);
+
+                    let incrementButton = document.createElement("button");
+                    incrementButton.textContent = "Increase";
+                    incrementButton.className = "increment-button";
+                    incrementButton.onclick = function() {
+                        count++;
+                        counterDisplay.textContent = "Count: " + count;
+                        localStorage.setItem("itemCount" + i, count);
+                    };
+                    container.appendChild(incrementButton);
+
+                    let decrementButton = document.createElement("button");
+                    decrementButton.textContent = "Decrease";
+                    decrementButton.className = "decrement-button";
+                    decrementButton.onclick = function() {
+                        if (count > 1) { 
+                            count--;
+                            counterDisplay.textContent = "Count: " + count;
+                            localStorage.setItem("itemCount" + i, count);
+                        }
+                    };
+                    container.appendChild(decrementButton);
+
+                    let clearButton = document.createElement("button");
+                    clearButton.textContent = "Clear This Item";
+                    clearButton.className = "clear-button";
+                    clearButton.onclick = function() {
+                        container.remove();
+                        clearContent(i);
+                    };
+                    container.appendChild(clearButton);
+
+                    destination.appendChild(container);
+                }
+            }
+
+            nextButton.style.display = hasItems ? "block" : "none";
+
+            if (hasItems) {
+                let clearAllButton = document.createElement("button");
+                clearAllButton.textContent = "Clear All Items";
+                clearAllButton.className = "clear-all-button";
+                clearAllButton.onclick = function() {
+                    clearAllContent();
+                };
+                destination.appendChild(clearAllButton);
+            } else {
+                let noItemsMessage = document.createElement("div");
+                noItemsMessage.textContent = "There is no item added.";
+                noItemsMessage.className = 'no-items-message';
+                destination.appendChild(noItemsMessage);
+            }
+        }
+
+        function clearContent(index) {
+            localStorage.removeItem("copiedContent" + index);
+            localStorage.removeItem("itemCount" + index);
+            loadItems();
+            alert("Content cleared.");
+        }
+
+        function clearAllContent() {
+            for (let i = 1; i <= 12; i++) {
+                localStorage.removeItem("copiedContent" + i);
+                localStorage.removeItem("itemCount" + i);
+            }
+            loadItems(); 
+            alert("All content cleared.");
+        }
+
+        loadItems(); 
+    }
+</script>
+
+</body>
+</html>

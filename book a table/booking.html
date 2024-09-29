@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+   <link rel="stylesheet" href="booking.css">
+    <title>booking</title>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="../image/logo-removebg-preview.png" class="logo">
+    
+            <h3>RESTAURANT</h3>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../main/Home.html">Home</a></li>
+                <li><a href="../menu/menu.html" >Menu</a></li>
+                <li><a href="../online/Onilne_Order.html">Order</a></li>
+                <li><a href="../about/about.html" >about</a></li>
+                <li><a href="../branches/branches.html">branches</a></li>
+                <li><a href="../book a table/booking.html" id="bookTable" class="active">book a table</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- <section id="book a table"> -->
+        <section class="all "> 
+            <div class="video"> 
+                <video controls autoplay loop muted width="550px" >
+                    <source src="./WhatsApp Video 2024-09-01 at 01.45.14_4a2a71cc.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="part2" >
+                <p>BOOK NOW</p>
+                <form id="form" >
+                    <div>
+                    <label id="error-message-name" style="color: red; display: none;">Please enter a valid name.</label>
+                    <input type="text" placeholder="Your Name" required id="name">
+                        <input type="datetime-local" placeholder="Date&Time" required>
+                        <input type="email" placeholder="Your Email" required id="mail">
+                    
+                    
+                        <textarea placeholder="Special Request" id="Special Request"></textarea>
+                    </div>
+                    <div>
+                        <label id="error-message-phone" style="color: red; display: none;">Please enter a valid phone number.</label>
+                        <input type="tel" placeholder="Enter your phone" required id="tel">
+                        
+                        <label id="error-message-people" style="color: red; display: none;">Please choose a valid number of people.</label>
+                        <select name="number of people" required id="peoples">
+                            <optgroup label="number of persons">
+                                <option value="">--number of person--</option>
+                                <option value="1 person">1 person</option>
+                                <option value="2 persons">2 persons</option>
+                                <option value="3 persons">3 persons</option>
+                                <option value="4 persons">4 persons</option>
+                                <option value="5 persons">5 persons</option>
+                                <option value="6 persons">6 persons</option>
+                            </optgroup>
+                        </select>
+                        <label id="error-message-place" style="color: red; display: none;">Please choose a valid place.</label>
+                        <select name="what place" required id="place">
+                            <optgroup label="choose place">
+                                <option value="">--Choose place--</option>
+                                <option value="maddi">maddi</option>
+                                <option value="Assuit Residential Area">Assuit Residential Area</option>
+                                <option value="cairo El-Korba">cairo El-Korba</option>
+                                <option value="Fayoum City Plaza">Fayoum City Plaza</option>
+                                <option value="Fayoum Lutf Allah">Fayoum Lutf Allah</option>
+                                <option value="Minya New City">Minya New City</option>
+                                <option value="Salah Salem Street, Cairo">Salah Salem Street, Cairo</option>
+                                <option value="Zamalek">Zamalek</option>
+                                <option value="Heliopolis">Heliopolis</option>
+                            </optgroup>
+                        </select>
+                        <input type="submit" value="BOOK NOW" class="button" >
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>123 Foodie Street, cairo City</p>
+                    <p>Phone: 01207961718</p>
+                    <p>Email: Mariam@gmail.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Operating Hours</h3>
+                    <p>Monday - Friday: 8 AM - 10 PM</p>
+                    <p>Saturday - Sunday: 9 AM - 11 PM</p>
+                </div>
+                <div class="footer-section ">
+                    <h3>Follow Us</h3>
+                    <div class="links">
+                        <a href="#">Facebook
+                            <img src="../image/download1-removebg-preview.png">
+                        </a>
+        
+                        <a href="#">Instagram
+                            <img src="../image/download__1_-removebg-preview.png">
+                        </a>
+        
+                        <a href="#">Twitter
+                            <img src="../image/Twitter_for_Educators_-_A_Document-removebg-preview.png">
+                        </a>
+        
+                    </div>
+                </div>
+            </div>
+        </footer>
+    <script src="booking.js"></script>
+</body>
+</html>

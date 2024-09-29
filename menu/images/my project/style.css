@@ -1,0 +1,95 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+body{
+    background-image: linear-gradient(to right,  rgb(4, 4, 58),rgba(0, 0, 0, 0.918));
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+a{
+    color:white;
+}
+.container{
+
+   background-image:
+   
+   linear-gradient(to right,  rgba(4, 4, 58, 0.753) 30%,rgba(0, 0, 0, 0.466)),
+   
+   url(images/photoo.webp);
+   width:90%;
+   height:640px;
+   background-position: center;
+}
+.container:hover{
+    
+   background-image:
+   
+   linear-gradient(to right,  rgba(4, 4, 58, 0.753),transparent),
+   
+   url(images/photoo.webp);
+  
+}
+header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:10px;
+    
+    
+}
+.logo{
+    font-size: 30px;
+    text-transform: uppercase;
+}
+ul {
+    width:60%;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+ul li a:hover{
+    text-decoration:underline;
+}
+li a:active{
+    color:black;
+}
+h2{
+    margin: 10px;
+    font-size:80px;
+    color:white;
+    padding:10px;
+    text-transform: uppercase;
+}
+p{
+    color:white;
+    font-size:20px;
+    letter-spacing: 2px;
+    width:350px;
+    padding: 10px;
+}
+button{
+    font-size: 18px;
+    padding :5px;
+    margin: 10px;
+    border-radius: 5px;
+    border:none;
+    border:2px solid transparent;
+}
+button:hover{
+    background-color: transparent;
+    border-color: white;
+    color:white;
+    cursor: pointer;
+}
+button:active{
+    color:red;
+}
+
+
+
+    

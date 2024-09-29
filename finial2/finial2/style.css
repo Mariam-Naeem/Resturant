@@ -1,0 +1,613 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#container {
+    flex: 1;
+}
+header{
+border-radius: 4px;
+position: sticky;
+top: 0;
+z-index: 2000;
+font-size: 19px;
+     background: linear-gradient(to right, #B7B597, #59585c);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h3,.logo{
+    color: #fff;
+    width: 70px;
+    margin-left: 40px;
+    border-radius: 50%;
+}
+header ul {
+     padding: 30px; 
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+
+}
+header ul li a{
+        margin: 5px;
+    padding: 8px;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+font-weight: bold;
+}
+header ul li a:hover{
+    
+    background-color:  #FFF078;
+    border-radius: 40%;
+    color: #fff;
+}
+.active{
+color: #FFF078;
+}
+#bookTable{
+    background-color: #FFF078;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    padding: 15px;
+    margin-top: 15px;
+}
+
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    top: 177px;
+    position: relative;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 300px;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.footer-section {
+    margin: 20px;
+    padding: 20px;
+}
+
+.footer-section h3, .footer-section p {
+    margin-top: 10px;
+    padding: 5px;
+}
+
+.footer-section a {
+    color: #fff078;
+    text-decoration: none;
+}
+
+.footer-section a img {
+    width: 40px;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+}
+
+
+#container {
+    flex: 1;
+    padding: 20px; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+.dynamic-content {
+    border: 1px solid #E1D7B7;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #F9DBBA;
+    color: #1F316F;
+    height: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+
+.clear-button {
+    background-color: rgb(222, 64, 12);
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-left: 20px;
+        position: relative;
+    right: 32px;
+}
+
+.clear-button:hover {
+    background-color: #e60000;
+}
+
+
+.dynamic-content img {
+    width: 133px;
+    height: 132px;
+    object-fit: cover;
+    border-radius: 86px;
+}
+
+.no-items-message {
+    font-size: 18px;
+    color: #ff0000; 
+    text-align: center;
+    padding: 20px;
+    background-color: #f8d7da; 
+    border: 1px solid #f5c6cb; 
+    border-radius: 5px;
+}
+.clear-all-button {
+    background-color: #d9534f;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px; 
+    display: block;
+    width: 200px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.clear-all-button:hover {
+    background-color: #c9302c;
+}
+.counter-display{
+    border: 1px solid rgb(208, 195, 195);
+    border-radius: 9px;
+    background: #6660a9;
+    color: #000000;
+    padding: 2px;
+    position: relative;
+    right: 483px;
+    top: 71px;
+}
+
+
+.increment-button{
+    background-color: #b3b8c9;
+    padding: 5px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    position: relative;
+    top: 60px;
+    left: 270px;
+}
+
+.increment-button:hover {
+    background-color: #657db2;
+} 
+.decrement-button{
+    background-color: #b3b8c9;
+    padding: 5px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    position: relative;
+    top: 60px;
+    left: 220px;
+}
+
+.decrement-button:hover {
+    background-color: #657db2;
+} 
+
+
+
+
+.next {
+    background-color: rgb(12, 222, 12);
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-left: 20px;
+    position: relative;
+    left: 47%;
+}
+
+.next:hover {
+    background-color: #1e7938;
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:570px) {
+    
+    header{
+        text-align: center;
+        border-radius: 4px;
+        position: sticky;
+        top: 0;
+        z-index: 2000;
+        font-size: 19px;
+        background: linear-gradient(to right, #B7B597, #59585c);
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+}
+header h3,.logo{
+    
+        color: #fff;
+        max-width: 70px;
+        border-radius: 50%;
+        margin-right: 100px;
+}
+
+header ul {
+            margin: 0px;
+        padding: 5px;
+        display: flex;
+        flex-direction: row;
+        
+        flex-wrap: wrap;
+    }
+    header ul li{
+        padding:8px;
+    }
+header ul li a{
+        margin: 5px;
+    
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+font-weight: bold;
+}
+
+
+.footer-container{
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    align-items: center;
+
+}
+.footer-section{
+    margin: 7px;
+    padding: 5px;
+}
+
+}
+@media screen and (min-width:570px) and  (max-width:618px) {
+
+    header{
+border-radius: 4px;
+        position: sticky;
+        top: 0;
+        z-index: 2000;
+        font-size: 19px;
+        background: linear-gradient(to right, #B7B597, #59585c);
+        background-size: cover;
+        display: flex;
+flex-wrap: wrap;
+        flex-direction: column;
+        align-content: space-between
+}
+
+header ul {
+            margin: 0px;
+        padding: 5px;
+        display: flex;
+        flex-direction: row;
+        
+        flex-wrap: wrap;
+    }
+header ul li a{
+        margin: 5px;
+    
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+font-weight: bold;
+}
+
+#bookTable{
+    background-color: #FFF078;
+    border: 1px solid transparent;
+    border-radius: 4px;   
+}
+}
+@media screen and (min-width:618px) and (max-width:730px) {
+    header{
+            display: flex;
+
+    align-items: center;
+    flex-wrap: wrap;
+    }
+    header ul {
+    
+    list-style: none;
+    display: flex;
+    
+    align-items: center; 
+}
+header ul li a{
+        margin: 5px;
+
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+font-weight: bold;
+}
+}
+
+/* Dynamic content styles */
+.dynamic-content {
+    border: 1px solid #E1D7B7;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #F9DBBA;
+    color: #1F316F;
+    height: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Button styling */
+.clear-button {
+    background-color: rgb(222, 64, 12);
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-left: 20px;
+    position: relative;
+    right: 32px;
+}
+
+.clear-button:hover {
+    background-color: #e60000;
+}
+
+/* Image inside the dynamically created content */
+.dynamic-content img {
+    width: 133px;
+    height: 132px;
+    object-fit: cover;
+    border-radius: 86px;
+}
+
+/* No items message styling */
+.no-items-message {
+    font-size: 18px;
+    color: #ff0000;
+    text-align: center;
+    padding: 20px;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+}
+
+/* Clear all button */
+.clear-all-button {
+    background-color: #d9534f;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    display: block;
+    width: 200px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.clear-all-button:hover {
+    background-color: #c9302c;
+}
+
+/* Counter display and buttons */
+.counter-display {
+    border: 1px solid rgb(208, 195, 195);
+    border-radius: 9px;
+    background: #6660a9;
+    color: #000000;
+    padding: 2px;
+    position: relative;
+    right: 483px;
+    top: 71px;
+}
+
+.increment-button, .decrement-button {
+    background-color: #b3b8c9;
+    padding: 5px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    position: relative;
+    top: 60px;
+}
+
+.increment-button:hover, .decrement-button:hover {
+    background-color: #657db2;
+}
+
+/* Adjusted position for increment and decrement buttons */
+.increment-button {
+    left: 270px;
+}
+
+.decrement-button {
+    left: 220px;
+}
+
+/* Next button */
+.next {
+    background-color: rgb(12, 222, 12);
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-left: 20px;
+    position: relative;
+    left: 47%;
+}
+
+.next:hover {
+    background-color: #1e7938;
+}
+
+/* Media Queries */
+
+/* Styles for screen sizes below 570px */
+@media screen and (max-width: 570px) {
+    header {
+        text-align: center;
+        flex-direction: column;
+    }
+
+    header h3, .logo {
+        max-width: 70px;
+        margin-right: 100px;
+    }
+
+    header ul {
+        margin: 0;
+        padding: 5px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    header ul li {
+        padding: 8px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        height: fit-content;
+        align-items: center;
+    }
+
+    .footer-section {
+        margin: 7px;
+        padding: 5px;
+    }
+
+    .dynamic-content {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+    }
+
+    .dynamic-content img {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 10px;
+    }
+
+    .counter-display, .increment-button, .decrement-button, .clear-button {
+        position: static;
+        margin: 10px 0;
+    }
+
+    .counter-display {
+        background: #6660a9;
+        color: #000000;
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    .increment-button, .decrement-button {
+        padding: 10px;
+        border-radius: 10px;
+        font-size: 12px;
+    }
+}
+
+/* Styles for screen sizes between 570px and 618px */
+@media screen and (min-width: 570px) and (max-width: 618px) {
+    header {
+        flex-direction: column;
+        align-content: space-between;
+    }
+
+    header ul {
+        margin: 0;
+        padding: 5px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    header ul li a {
+        margin: 5px;
+    }
+
+    #bookTable {
+        border-radius: 4px;
+    }
+}
+
+/* Styles for screen sizes between 618px and 730px */
+@media screen and (min-width: 618px) and (max-width: 730px) {
+    header {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    header ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+    }
+
+    header ul li a {
+        margin: 5px;
+    }
+}
+
+/* Styles for screen sizes between 730px and 1000px */
+@media screen and (min-width: 730px) and (max-width: 1000px) {
+    .dynamic-content img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .counter-display, .increment-button, .decrement-button, .clear-button {
+        font-size: 14px;
+        padding: 8px 16px;
+        margin: 8px;
+    }
+}
